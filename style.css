@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --desktop-breakpoint: 1440px;
+    --mobile-breakpoint: 375px;
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+    --green: hsl(75, 94%, 57%);
+    --font-family: 'Inter', sans-serif;
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --spacing-xs: 4px;
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 40px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+   margin: 0;
+}
+
+body {
+    background-color: var(--grey-900);
+    color: var(--white);
+    font-family: var(--font-family);
+    letter-spacing: 0px;
+    line-height: 150%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--grey-800);
+    border-radius: 12px;
+    padding: var(--spacing-xl);
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-header--img {
+    border-radius: 50%;
+    height: 88px;
+    width: 88px;
+    margin-bottom: var(--spacing-l);
+}
+
+.card-header--name {
+    font-size: 24px;
+    font-weight: var(--font-weight-700);
+    margin-bottom: var(--spacing-m);
+}
+
+.card-header--location {
+    font-size: 14px;
+    font-weight: var(--font-weight-700);
+    margin-bottom: var(--spacing-l);
+    color: var(--green);
+}
+
+.card-header--role {
+    font-size: 14px;
+    font-weight: var(--font-weight-400);
+    margin-bottom: var(--spacing-l);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-l);
+}
+
+.card-content--a { 
+    display: block;
+    width: 304px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--grey-700);
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0px;
+    font-size: 14px;
+    font-weight: var(--font-weight-600);
+    padding: var(--spacing-m);
+    cursor: url('assets/images/handcursor.svg'), pointer;
+    transition: opacity 125ms ease-in, background-color 400ms ease-in;
+}
+
+.card-content--a:hover {
+    background-color: var(--green);
+    color: var(--grey-800);
+    text-decoration: none;;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background-color: hotpink;
+    }
+
+    .card {
+        max-width: 327px;
+    }
+
+    .card-content--a {
+        width: 279px;
+    }
+}
+
